@@ -2,7 +2,17 @@
 
 **Auditing the evaluation of EEG decoding.**
 
-auditeeg is an open-source framework for auditing how decoding scores are obtained in electroencephalography (EEG) and brain–computer interface (BCI) research. Rather than proposing another decoder, it measures how much of a reported score is produced by the evaluation itself: the way data are split and preprocessed, the defaults of benchmark software, and the rules by which results are selected and reported.
+auditeeg is an open-source framework for auditing how decoding scores are obtained in electroencephalography (EEG) and brain–computer interface (BCI) research. It measures how much of a reported score is produced by the evaluation itself: the way data are split and preprocessed, the defaults of benchmark software, and the rules by which results are selected and reported.
+
+## Principles
+
+auditeeg follows five principles, CLEAN:
+
+- **Counterfactual** – every flaw is measured against its clean twin on the same data and the same split;
+- **Lifecycle-wide** – the audit spans the whole study, from design and data acquisition to reporting;
+- **Evidence-based** – effects are tested over participants, and every number is traceable to a result file and a code version;
+- **Actionable** – every audited flaw comes with a remedy and a check, cheap static checks first;
+- **Non-intrusive** – the authors' own pipeline is audited as it is, and other tools through split and prediction files.
 
 ## Approach
 
@@ -12,18 +22,13 @@ The framework is model-agnostic. Pipelines from scikit-learn, pyRiemann, brainde
 
 ## Scope
 
-The audit covers four levels of an EEG decoding study:
-
-- **Evaluation protocol** – information from test data reaching the model, and test data that do not match the population or setting of the claim;
-- **Model selection and reporting** – choices made with the test score, and the statistics used to support a claim;
-- **Signal validity** – non-neural or stimulus-locked signals that can carry the class label;
-- **Toolchain** – silent defects and defaults of widely used benchmark libraries.
+The audit follows the life cycle of an EEG decoding study, from study design and data splitting through preprocessing, model training and model selection to claims and reporting. At each stage it covers information from test data reaching the model, signals that are not neural but carry the class label, choices made with the test score, claims that do not match the evaluation, statistics used to support a claim, and pipelines that run differently from what was stated. Concrete cases observed in widely used benchmark software and in published studies are recorded alongside each flaw.
 
 Paradigms studied so far include motor imagery, P300 event-related potentials and steady-state visual evoked potentials, under within-session, cross-session and cross-subject evaluation.
 
 ## Status
 
-A manuscript describing the framework, its catalogue of audited mechanisms and the empirical results is in preparation. The full toolkit, documentation and audit catalogue will be released on this site upon acceptance of the manuscript. A curated, continuously updated catalogue of evaluation flaws will be released with the paper.
+A manuscript describing the framework, its catalogue of audited mechanisms and the empirical results is in preparation. The full toolkit and documentation will be released on this site upon acceptance of the manuscript, together with a curated, continuously updated catalogue of evaluation flaws.
 
 The package name is reserved on PyPI (`pip install auditeeg`). The current placeholder release (0.0.1) contains only the statistics module.
 
