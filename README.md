@@ -32,6 +32,14 @@ A manuscript describing the framework, its catalogue of audited mechanisms and t
 
 The package name is reserved on PyPI (`pip install auditeeg`). The current placeholder release (0.0.1) contains only the statistics module.
 
+## Team
+
+- Rolly Maulana Awangga – rollymaulanaa@student.telkomuniversity.ac.id
+- Prof. Dr. Suyanto, S.T., M.Sc. – suyanto@telkomuniversity.ac.id
+- Bedy Purnama, S.Si., M.T., Ph.D. – bedypurnama@telkomuniversity.ac.id
+
+School of Computing, Center of Excellence Artificial Intelligence for Learning and Optimization, Telkom University
+
 ## License
 
 auditeeg is released under the BSD 3-Clause License.
