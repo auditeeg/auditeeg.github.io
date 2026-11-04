@@ -23,7 +23,7 @@ Paradigms studied so far include motor imagery, P300 event-related potentials an
 
 ## Status
 
-A manuscript describing the framework, its catalogue of audited mechanisms and the empirical results is in preparation. The full toolkit, documentation and audit catalogue will be released on this site upon acceptance of the manuscript.
+A manuscript describing the framework, its catalogue of audited mechanisms and the empirical results is in preparation. The full toolkit, documentation and audit catalogue will be released on this site upon acceptance of the manuscript. A curated, continuously updated catalogue of evaluation flaws will be released with the paper.
 
 The package name is reserved on PyPI (`pip install auditeeg`). The current placeholder release (0.0.1) contains only the statistics module.
 
